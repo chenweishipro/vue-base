@@ -22,5 +22,14 @@ Vue.component('component-a', {
 
 
 new Vue({
+  data: {
+    user: 'admin',
+    age: 17,
+  },
+  methods: {
+    test() {
+      console.log('测试全局方法！');
+    }
+  },
   render: h => h(App),
 }).$mount('#app')

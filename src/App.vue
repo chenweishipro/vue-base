@@ -4,7 +4,8 @@
     <!-- <component-a></component-a>
     <comB></comB>
     <comC /> -->
-    <EmitFather />
+    <!-- <EmitFather /> -->
+    <DataParent />
   </div>
 </template>
 
@@ -12,12 +13,14 @@
   //  引入局部组件
   import comB from './components/cmp/comB'
   import comC from './components/cmp/comC.vue'
-import EmitFather from './components/vue-emit/EmitFather.vue';
+  import DataParent from './components/vue-data/DataParent.vue';
+  import EmitFather from './components/vue-emit/EmitFather.vue';
   import PropsFather from './components/vue-props/PropsFather.vue'
 export default {
   name: 'App',
   components: {
     EmitFather,
+    DataParent
 
   },
   data () {
