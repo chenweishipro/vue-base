@@ -3,12 +3,19 @@
     <h2>访问根实例</h2>
     <p>根实例的数据：{{ $root.user }}|{{ $root.age }}</p>
     <p><button @click="getRoot">获取根实例</button></p>
-    <Son />
+    <Son ref="mySon"/>
 
     <hr>
     <p>
       <button @dblclick="getChildren">获取子组件</button>
     </p>
+    <hr>
+    <h2>访问子组件实例或子元素</h2>
+    <div ref="myDiv">
+      DOM元素div
+
+    </div>
+    <button @click="getByRef">获取子组件和DOM元素</button>
   </div>
 </template>
 
@@ -34,7 +41,14 @@
       },
 
       getChildren() {
-        console.log(this.$children);
+        console.log(this.$children[0].info);
+      },
+      getByRef() {
+        console.log(this.$refs)
+        this.$refs.myDiv.style.color='pink';
+        console.log(this.$refs.mySon.info);
+      
+        
       },
     },
     

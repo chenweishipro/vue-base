@@ -9,6 +9,12 @@
 
 <script>
   export default {
+    data () {
+      return {
+        info:'大头儿子',
+
+      }
+    },
     methods: {
       getParent() {
         console.log(this.$parent);
