@@ -20,6 +20,7 @@ Vue.component('component-a', {
   },
 })
 
+Vue.prototype.$title = '我是原型对象上的属性';
 
 new Vue({
   data: {

@@ -6,6 +6,11 @@
     <comC /> -->
     <!-- <EmitFather /> -->
     <DataParent />
+    <hr>
+    <h1>匿名插槽</h1>
+    <List />
+    <hr>
+    <News />
   </div>
 </template>
 
@@ -16,11 +21,15 @@
   import DataParent from './components/vue-data/DataParent.vue';
   import EmitFather from './components/vue-emit/EmitFather.vue';
   import PropsFather from './components/vue-props/PropsFather.vue'
+  import List from './components/vue-slot/List.vue';
+  import News from './components/vue-slot/News.vue';
 export default {
   name: 'App',
   components: {
     EmitFather,
-    DataParent
+    DataParent,
+    List,
+    News,
 
   },
   data () {

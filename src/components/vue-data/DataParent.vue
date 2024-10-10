@@ -16,11 +16,16 @@
 
     </div>
     <button @click="getByRef">获取子组件和DOM元素</button>
+
+    <hr>
+    <h2>访问原型上的属性或方法</h2>
+    <button @click="getPrototype">访问原型上的属性或方法</button>
   </div>
 </template>
 
 <script>
-  import Son from './Son.vue'
+  
+import Son from './Son.vue'
   export default {
     components: {
       Son,  
@@ -49,6 +54,11 @@
         console.log(this.$refs.mySon.info);
       
         
+      },
+
+      getPrototype() {
+        console.log(this.$title);
+
       },
     },
     
