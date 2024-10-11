@@ -21,6 +21,11 @@ Vue.component('component-a', {
 })
 
 Vue.prototype.$title = '我是原型对象上的属性';
+Vue.config.errorHandler = (err, vm, info) => {
+ 
+  // handle error
+  console.log(err)
+}
 
 new Vue({
   data: {
