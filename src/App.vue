@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <Dycom/>
-    <hr>
-    <ErrorParent/>
+    <Directive/>
+    
   </div>
 </template>
 
@@ -17,16 +16,23 @@ import ErrorParent from './components/vue-errorCaptured/errorParent.vue';
 import PropsFather from './components/vue-props/PropsFather.vue'
 import List from './components/vue-slot/List.vue';
 import News from './components/vue-slot/News.vue';
+import Transition from './components/vue-transition/Transition.vue';
+
+import second from './components/vue-transition/animationend.vue'
+import Animationend from './components/vue-transition/animationend.vue';
+import GrandFather from './components/vue-provide-inject/GrandFather.vue';
+import Directive from './components/vue-directive/Directive.vue';
 export default {
   name: 'App',
   components: {
-   Dycom,
-   ErrorParent
+    Animationend,
+    GrandFather,
+    Directive,
 
   },
   data () {
     return {
-      
+        
     }
   },
   methods: {

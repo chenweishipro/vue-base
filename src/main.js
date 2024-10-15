@@ -2,6 +2,8 @@ import Vue from 'vue/dist/vue'
 
 import App from './App.vue'
 
+import 'animate.css'
+
 Vue.config.productionTip = false
 
 // 注册全局组件
@@ -22,10 +24,18 @@ Vue.component('component-a', {
 
 Vue.prototype.$title = '我是原型对象上的属性';
 Vue.config.errorHandler = (err, vm, info) => {
- 
+
   // handle error
   console.log(err)
 }
+
+// 全局指令
+Vue.directive("focus", {
+  inserted: function (el) {
+    el.focus();
+  }
+})
+
 
 new Vue({
   data: {
