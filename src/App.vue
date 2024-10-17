@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Directive/>
+    <VueFilter/>
     
   </div>
 </template>
@@ -18,16 +18,18 @@ import List from './components/vue-slot/List.vue';
 import News from './components/vue-slot/News.vue';
 import Transition from './components/vue-transition/Transition.vue';
 
-import second from './components/vue-transition/animationend.vue'
+
 import Animationend from './components/vue-transition/animationend.vue';
 import GrandFather from './components/vue-provide-inject/GrandFather.vue';
 import Directive from './components/vue-directive/Directive.vue';
+import VueFilter from './components/Vue-Filter/VueFilter.vue';
 export default {
   name: 'App',
   components: {
     Animationend,
     GrandFather,
     Directive,
+    VueFilter,
 
   },
   data () {
